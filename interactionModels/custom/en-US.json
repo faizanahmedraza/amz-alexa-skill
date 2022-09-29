@@ -1,0 +1,96 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "my routine skill",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "ShowWebsite",
+          "slots": [
+            {
+              "name": "email",
+              "type": "AMAZON.Residence",
+              "samples": [
+                "my email is  {email}",
+                "{email}"
+              ]
+            }
+          ],
+          "samples": [
+            "show me website link",
+            "show me website",
+            "show link about alexa routines",
+            "ok send me a link",
+            "Ok sending you a link about Alexa routines"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "ShowWebsite",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "email",
+              "type": "AMAZON.Residence",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.820245417751.35465723676"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.820245417751.35465723676",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Ok perfect  Can you please provide us with   alexa registered email address ?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "9"
+}
